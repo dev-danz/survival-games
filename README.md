@@ -1,7 +1,11 @@
 # 🎮 Survival Game (JavaScript) <img width="47" height="64" alt="herobaixofrente" src="https://github.com/user-attachments/assets/0001bfa8-3dec-451f-ba8d-f33bbc1e95ff" />
 
 
-Esse é um jogo que eu desenvolvi usando **JavaScript + HTML5 Canvas**, com o objetivo de praticar lógica, animação, spawn de inimigos, câmera, colisão e sistemas de upgrade.
+Esse é um jogo que eu desenvolvi usando: <p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=js,html,css," />
+  </a>
+</p> Com o objetivo de praticar lógica, animação, spawn de inimigos, câmera, colisão e sistemas de upgrade.
 
 O jogo é inspirado em jogos survival estilo VAMPIRE SURVIVORS onde o jogador precisa sobreviver o máximo de tempo possível enquanto enfrenta inimigos cada vez mais fortes.
 
