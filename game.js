@@ -95,6 +95,7 @@ appleImg.src = "img/apple.png"
 let apples = []
 let appleTimer = 0
 let circleShotTimer = 0
+let hasCircleUpgrade = false
 
 
 function loadEnemy(src){
@@ -629,7 +630,7 @@ function checkApplePickup(){
 
         if(dist < player.size){
 
-            circleShotTimer = 300 // 5 segundos
+            circleShotTimer = 180 // 3 segundos
             apples.splice(i,1)
 
         }
@@ -792,7 +793,7 @@ effect: () => {
 
     if(shootDelay > maxStats.fireRate){
 
-        shootDelay -= 5
+        shootDelay -= 3
 
         if(shootDelay < maxStats.fireRate){
             shootDelay = maxStats.fireRate
@@ -1001,7 +1002,7 @@ let shootTimer=0
 let spawnTimer=0
 let xp=0
 let level=1
-let shootDelay=40
+let shootDelay=70
 let timeAlive=0
 let upgradeMenu = false
 let upgradeOptions = []
@@ -1088,13 +1089,18 @@ function gameLoop(){
 
     shootTimer++
 
+if(circleShotTimer > 0){
+    circleShotTimer--
+}
+
+shootTimer++
+
 if(shootTimer >= shootDelay){
 
     if(circleShotTimer > 0){
         shootCircle()
-        circleShotTimer--
     }
-    else if(level >= 5){
+    else if(hasCircleUpgrade){
         shootCircle()
     }
     else{
